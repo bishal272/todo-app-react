@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+main {
+  max-width: 400px;
+  margin: 100px auto;
+}
+body {
+  background-color: #17181f;
+  color: #ddd;
+  margin: 0;
+}
+form {
+  border: 3px solid #30313d;
+  border-radius: 10px;
+  padding: 5px;
+  display: flex;
+}
+form input[type="text"] {
+  border: 0;
+  background: none;
+  color: #fff;
+  padding: 0 8px;
+  width: 100%;
+  display: block;
+}
+form.taskfield input:focus {
+  outline: none;
+}
+form button {
+  background-color: #61dafb;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+}
+div.task {
+  background-color: #30313d;
+  border-radius: 10px;
+  display: flex;
+  padding: 5px 9px;
+  margin-top: 5px;
+  transition: opacity 0.3s linear;
+  align-items: center;
+}
+div.checkbox {
+  align-items: center;
+  display: flex;
+}
+div.task svg {
+  fill: #61dafb;
+  height: 20px;
+  margin-right: 6px;
+}
+div.task.done {
+  opacity: 0.3;
+}
+div.task span {
+  position: relative;
+}
+div.task span::before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  position: absolute;
+  background-color: #ddd;
+  top: 10px;
+  transition: width 0.1s linear;
+}
+div.task.done span::before {
+  width: 100%;
+}
+div.task-name,
+div.task form {
+  flex-grow: 1;
+}
+h1,
+h2 {
+  text-align: center;
+}
+button.trash {
+  background: none;
+  border: none;
+  display: flex;
+  cursor: pointer;
+}
+button.trash svg {
+  fill: #888;
+  height: 14px;
+}
+div.task input {
+  border: 2px solid #555;
+  border-radius: 5px;
+  padding: 2px 4px;
+}
+footer {
+  width: 100%;
+  text-align: center;
+}
